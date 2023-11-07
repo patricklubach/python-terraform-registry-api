@@ -135,8 +135,7 @@ async def list_latest_module_version_foreach_provider(namespace: str, name: str,
     modules = [
         module
         for module in module_db
-        if module.namespace == namespace
-        and module.name == name
+        if module.namespace == namespace and module.name == name
     ]
 
     return ModuleResponse(Meta(limit=0, current_offset=0), modules)
